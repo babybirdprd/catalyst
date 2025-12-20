@@ -1,0 +1,1 @@
+fn main() { catalyst_core::ignite(); println!("Desktop Online"); }

@@ -1,0 +1,5 @@
+target/
+apps/frontend/node_modules/
+apps/frontend/dist.catalyst/
+apps/frontend/dist/
+.catalyst/

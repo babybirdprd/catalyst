@@ -1,0 +1,62 @@
+[package]
+name = "catalyst_core"
+version = "0.1.0"
+edition = "2021"
+description = "The Brain - Business logic, agent runtime, and state management for Catalyst"
+
+[dependencies]
+# Agent Framework
+radkit = { version = "0.0.4", features = ["runtime"] }
+
+# Async Runtime
+tokio = { version = "1", features = ["rt-multi-thread", "sync", "net", "process", "macros", "fs"] }
+
+# Serialization
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+schemars = "1"
+
+# Error Handling
+anyhow = "1.0"
+thiserror = "1.0"
+
+# Async trait support (required by radkit tools)
+async-trait = "0.1"
+
+# Date/Time
+chrono = { version = "0.4", features = ["serde"] }
+
+# File System
+walkdir = "2"
+ignore = "0.4"
+
+# HTTP Client (for search APIs)
+reqwest = { version = "0.11", features = ["json"] }
+urlencoding = "2"
+
+# Git Operations
+git2 = "0.18"
+
+# Rust Parsing (for scanner)
+syn = { version = "2", features = ["full", "parsing", "extra-traits"] }
+quote = "1.0"
+
+# Tree-sitter (for multi-language AST and module analysis)
+tree-sitter = "0.24"
+tree-sitter-rust = "0.24"
+
+# Pattern Matching
+glob = "0.3"
+
+# Pattern Matching
+regex = "1"
+
+# Persistence
+rusqlite = { version = "0.32", features = ["bundled"] }
+
+# Structured Logging
+tracing = "0.1"
+
+[dev-dependencies]
+tokio-test = "0.4"
+
